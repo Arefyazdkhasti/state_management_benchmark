@@ -52,32 +52,6 @@ class WeatherRepository {
       return weather;
     } catch (e) {
       throw Exception('Failed to fetch weather data: ${e.toString()}');
-      // // If the first attempt fails, try with a different approach
-      // // Sometimes the API works better with different parameters
-      // try {
-      //   final response = await _dioClient.get(
-      //     '/metar',
-      //     queryParameters: {
-      //       'station': location.toUpperCase(),
-      //       'format': 'json',
-      //       'mostRecent': 'true',
-      //     },
-      //   );
-
-      //   if (response.data == null || response.data.isEmpty) {
-      //     throw Exception('No weather data found for $location');
-      //   }
-
-      //   final weatherData = response.data is List ? response.data.first : response.data;
-      //   final weather = Weather.fromJson(weatherData);
-
-      //   _cachedWeather = weather;
-      //   _cacheTimestamp = DateTime.now();
-
-      //   return weather;
-      // } catch (e) {
-      //   throw Exception('Failed to fetch weather data: ${e.toString()}');
-      // }
     }
   }
 

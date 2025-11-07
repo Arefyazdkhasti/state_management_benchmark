@@ -1,10 +1,9 @@
 import 'package:dio/dio.dart';
 
 class DioClient {
-  //https://api.openweathermap.org/data/2.5/weather?q=Tehran&appid=3956f080743e9559357c046dd5f37415
   static const String baseUrl = 'https://api.openweathermap.org/data/2.5';
   static const String OPEN_WEATHER_MAP_API_KEY =
-      '3956f080743e9559357c046dd5f37415';
+      'YOUR_API_KEY'; // Do not use mine :) its free anyway
   static const Duration timeout = Duration(seconds: 30);
 
   late final Dio _dio;
